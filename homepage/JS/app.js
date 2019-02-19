@@ -10,25 +10,29 @@ function open_ses() {
   right_o.style.position = "absolute"
   var pos = 30;
   var id = setInterval(frame, 5);
+  var anim_done = false;
   function frame() {
    if (pos < 4) {
      clearInterval(id);
+     anim_done = true;
    } else {
      pos--;
      left_o.style.left = pos + "%";
      right_o.style.right = pos + "%";
     }
   }
-  function fadeOut() {
-    var fadeEffect = setInterval(fadeEffect, 5);
-
-    function fadeEffect()
-       if (center_o.style. > 0) {
-           center_o.style.opacity -= 0.1;
-       } else {
-           clearInterval(fadeEffect);
-       }
+  if (anim_done == true) {
+    function fadeOut() {
+      var fadeEffect = setInterval(fadeEffect, 5);
+      function fadeEffect()
+         if (center_o.style.opacity > 0) {
+             center_o.style.opacity -= 0.1;
+         } else {
+             clearInterval(fadeEffect);
+         }
+    }
   }
+
 
 
 /*  left_o.classList.add("l_o");

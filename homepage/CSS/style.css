@@ -22,6 +22,7 @@ body {
   align-items: center;
   width: 100%;
   position: relative;
+  cursor: pointer;
 }
 
 #l, #r {
@@ -32,21 +33,4 @@ font-size: 3em;
 #c {
   margin: 0 15px;
   opacity: 1;
-}
-
-.l_o {
-  transition: 1.5s;
-  display: inline;
-  position: absolute;
-  left: 15px;
-}
-.r_o {
-  transition: 1.5s;
-  display: inline;
-  position: absolute;
-  right: 15px;
-  }
-.c_o {
-    transition: 1.5s;
-    display: none;
 }
