@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+
+.open_bg {
+  background-color: rgba(0, 0, 0, 1);;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.openup_ses {
+  font-size: 2.2em;
+  color: white;
+  font-family: arial;
+  width: 100%;
+
+}
+#click_to_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+#l, #r {
+margin: 0;
+font-size: 3em;
+}
+
+#c {
+  margin: 0 15px;
+  opacity: 1;
+}
+
+.l_o {
+  transition: 1.5s;
+  display: inline;
+  position: absolute;
+  left: 15px;
+}
+.r_o {
+  transition: 1.5s;
+  display: inline;
+  position: absolute;
+  right: 15px;
+  }
+.c_o {
+    transition: 1.5s;
+    display: none;
+}
