@@ -33,11 +33,4 @@ function open_ses() {
     }
   }
 
-
-
-/*  left_o.classList.add("l_o");
-  right_o.classList.add("r_o");
-  center_o.classList.add("c_o"); */
-}
-
 cto.addEventListener ("click", open_ses);
