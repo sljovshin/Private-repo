@@ -67,9 +67,9 @@ function ydec (){
 function change_blade() {
   switch (y+x) {
     case 2:
-      sec1x1.style.height = "100%"
+
       sec1x1.style.width = "100%"
-      sec1x2.style.height = "0"
+
       sec1x2.style.width = "0"
       sec2x1.style.height = "0"
       sec2x1.style.width = "0"
@@ -77,11 +77,11 @@ function change_blade() {
       console.log(blade);
       break;
     case 3:
-      sec1x1.style.height = "0"
+
       sec1x1.style.width = "0"
-      sec1x2.style.height = "100%"
+
       sec1x2.style.width = "100%"
-      sec1x3.style.height = "0"
+
       sec1x3.style.width = "0"
       sec2x2.style.height = "0"
       sec2x2.style.width = "0"
@@ -89,9 +89,9 @@ function change_blade() {
       console.log(blade);
       break;
     case 4:
-      sec1x2.style.height = "0"
+
       sec1x2.style.width = "0"
-      sec1x3.style.height = "100%"
+
       sec1x3.style.width = "100%"
       sec2x3.style.height = "0"
       sec2x3.style.width = "0"
@@ -100,33 +100,32 @@ function change_blade() {
       break;
     case 11:
       sec2x1.style.height = "100%"
-      sec2x1.style.width = "100%"
+
       sec1x1.style.height = "0"
       sec1x1.style.width = "0"
       sec2x2.style.height = "0"
-      sec2x2.style.width = "0"
+
 
       blade = "2x1";
       console.log(blade);
       break;
     case 12:
       sec2x1.style.height = "0"
-      sec2x1.style.width = "0"
+
       sec2x2.style.height = "100%"
-      sec2x2.style.width = "100%"
+
       sec2x3.style.height = "0"
-      sec2x3.style.width = "0"
-      sec1x2.style.height = "0"
+
       sec1x2.style.width = "0"
       blade = "2x2";
       console.log(blade);
       break;
     case 13:
       sec2x2.style.height = "0"
-      sec2x2.style.width = "0"
+
       sec2x3.style.height = "100%"
-      sec2x3.style.width = "100%"
-      sec1x3.style.height = "0"
+
+      
       sec1x3.style.width = "0"
       blade = "2x3";
       console.log(blade);

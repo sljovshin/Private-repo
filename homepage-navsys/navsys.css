@@ -25,7 +25,12 @@ align-items: center;
 justify-content: center;
 transition: ease-in-out 1s;
 }
-
+/*.top_row {
+  height: 100%;
+}
+.bot_row {
+  width: 100%;
+}*/
 #nav_top {
 position: absolute;
 top: 20px;
@@ -67,8 +72,6 @@ z-index: 9999;
   background-color: lightblue;
   height: 0%;
   width: 0%;
-  right: 0;
-  top: 50;
 }
 #sec1x3 {
   position: absolute;
