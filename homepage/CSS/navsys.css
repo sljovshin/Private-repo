@@ -24,7 +24,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 transition: ease-in-out 1s;
+overflow: hidden;
 }
+
 /*.top_row {
   height: 100%;
 }
@@ -39,6 +41,7 @@ transform: rotate(90deg);
 cursor: pointer;
 z-index: 9999;
 }
+
 #nav_left {
   position: absolute;
   top: 50%;
@@ -64,36 +67,30 @@ z-index: 9999;
 
 #sec1x1 {
   position: absolute;
-  background-color: red;
   left: 0;
 }
 #sec1x2 {
   position: absolute;
-  background-color: lightblue;
   height: 0%;
   width: 0%;
 }
 #sec1x3 {
   position: absolute;
-  background-color: lightgreen;
   height: 0%;
   width: 0%;
 }
 #sec2x1 {
   position: absolute;
-  background-color: yellow;
   height: 0%;
   width: 0%;
 }
 #sec2x2 {
   position: absolute;
-  background-color: purple;
   height: 0%;
   width: 0%;
 }
 #sec2x3 {
   position: absolute;
-  background-color: violet;
   height: 0%;
   width: 0%;
 }

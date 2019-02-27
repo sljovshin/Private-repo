@@ -1,38 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <meta charset="utf-8">
-    <title>sljovshin</title>
-  </head>
-  <body>
-    <header>
-      <h1>header</h1>
-    </header>
-    <main>
-      <h2>Main</h2>
-      <section>
-        <h3>Section 1</h3>
-      </section>
-      <section>
-        <h3>Section 2</h3>
-      </section>
-    </main>
-    <footer>
-      <h4>footer</h4>
-    </footer>
-    <!-- OPENING SCREEN -->
-    <div class="open_bg">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-      <div class="openup_ses">
-        <div id="click_to_open">
-          <h1 id="l">&lt;</h1>
-          <h1 id="c">sljovshin.no</h1>
-          <h1 id="r">&gt;</h1>
+  <link rel="stylesheet" href="CSS/master.css">
+  <title>navsys</title>
+</head>
+<body>
+  <header>
+    <h1>this is the header</h1>
+    <nav>
+      <ul>
+        <li>1x1</li>
+        <li>1x2</li>
+        <li>1x3</li>
+      </ul>
+      <ul>
+        <li>2x1</li>
+        <li>2x2</li>
+        <li>2x3</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- NAVIGATION CONTROLS -->
+    <nav id="nav_control">
+      <h1 id="nav_left">&lt;</h1>
+      <h1 id="nav_top">&lt;</h1>
+      <h1 id="nav_right">&gt;</h1>
+      <h1 id="nav_bottom">&gt;</h1>
+    </nav>
+
+    <section id="sec1x1" class="blade top_row">
+      <div class="1x1_content_wrapper">
+        <div id="1x1_img_container">
+          <img src="IMG/jstransbg.png" alt="">
+        </div>
+        <div id="1x1_text_container">
+
         </div>
       </div>
+    </section>
+    <section id="sec1x2" class="blade top_row"></section>
+    <section id="sec1x3" class="blade top_row"></section>
+    <section id="sec2x1" class="blade bot_row"></section>
+    <section id="sec2x2" class="blade bot_row"></section>
+    <section id="sec2x3" class="blade bot_row"></section>
+  </main>
+  <!-- OPENING SCREEN -->
+  <!-- div id="particles-js"></div> -->
+  <div id="open_bg">
+    <div class="openup_ses">
+      <div id="click_to_open">
+        <h1 id="l">&lt;</h1>
+        <h1 id="c">sljovshin.no</h1>
+        <h1 id="r">&gt;</h1>
+      </div>
     </div>
-    <script src="JS/app.js"></script>
-  </body>
+    <!--  <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+  </div>
+  <script src="JS/app.js"></script>
+  <script src="JS/navsys.js"></script>
+<!--  <script src="JS/particles.js"></script> -->
+
+</body>
 </html>

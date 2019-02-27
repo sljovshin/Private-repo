@@ -1,0 +1,21 @@
+@import "navsys.css";
+@import "open.css";
+
+#sec1x1 {
+  background-color: rgba(0,0,0,0.8);
+}
+#sec1x2 {
+  background-color: lightblue;
+}
+#sec1x3 {
+  background-color: lightgreen;
+}
+#sec2x1 {
+  background-color: yellow;
+}
+#sec2x2 {
+  background-color: purple;
+}
+#sec2x3 {
+  background-color: violet;
+}
