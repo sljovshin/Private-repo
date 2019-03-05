@@ -2,32 +2,50 @@
   margin: 0;
   padding: 0;
 }
+
 main {
   display: grid;
   grid-template-columns: 15% auto;
   grid-column-gap: 10px;
 }
+
 header {
   height: 10vh;
+}
+#left_view {
+  background-color: lightgreen;
+}
+#right_view {
+  background-color: lightblue;
 }
 section {
   height: 90vh;
 }
-#item_panel {
-  background-color: lightgreen;
-}
 
 #main_view {
   display: flex;
-  flex-direction: row;
-  background-color: lightblue;
+  flex-flow: row wrap;
 }
-.item {
+
+.item_in_panel {
   display: flex;
-  width: 95%;
+  width: 90%;
   height: 70px;
   background-color: darkgrey;
   margin: 10px auto;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.item_in_view {
+  display: flex;
+  width: 15%;
+  min-width: 180px;
+  height: 70px;
+  background-color: darkgrey;
+  margin: 10px 10px;
   border-radius: 5px;
   align-items: center;
   justify-content: center;
