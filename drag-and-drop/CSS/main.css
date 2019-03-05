@@ -21,7 +21,6 @@ header {
 section {
   height: 90vh;
 }
-
 #main_view {
   display: flex;
   flex-flow: row wrap;
