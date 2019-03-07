@@ -1,0 +1,23 @@
+#case {
+  display: grid;
+  grid-template-columns: 3% 10% auto;
+  grid-column-gap: 10px;
+}
+#case_menu {
+  height: 100%;
+  background-color: lightgrey;
+  display: flex;
+}
+.link {
+  width: 70%;
+  height: 20px;
+  background-color: blue;
+}
+#canvas_container {
+  display: grid;
+  align-items: center;
+  height: 100%;
+}
+#case_canvas {
+  margin: 0 auto;
+}

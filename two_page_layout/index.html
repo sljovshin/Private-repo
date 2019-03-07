@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Two page layout</title>
+</head>
+<body>
+  <h1 id="nav1" onmouseover="teaseMain();"> &lt; </h1>
+  <h1 id="nav2" onmouseover="teaseCase();"> &gt; </h1>
+  <header>
+
+  </header>
+  <main>
+
+    <section id="main" onclick="showMain();">
+
+    </section>
+    <section id="case" onclick="showCase();">
+      <div></div>
+      <section id="case_menu">
+        <div class="link"><p>link</p></div>
+        <div class="link"><p>link</p></div>
+        <div class="link"><p>link</p></div>
+        <div class="link"><p>link</p></div>
+      </section>
+      <section id="canvas_container">
+        <iframe id="case_canvas" src="" width="90%" height="80%"></iframe>
+      </section>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
