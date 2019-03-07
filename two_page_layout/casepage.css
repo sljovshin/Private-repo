@@ -6,7 +6,7 @@
 #case_menu {
   height: 100%;
   background-color: lightgrey;
-  display: flex;
+  display: none;
 }
 .link {
   width: 70%;
@@ -14,7 +14,7 @@
   background-color: blue;
 }
 #canvas_container {
-  display: grid;
+  display: none;
   align-items: center;
   height: 100%;
 }
