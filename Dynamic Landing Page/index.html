@@ -4,7 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            color: black;
+            background-position: bottom;
+            position: relative;
+        }
+
+        #time {
+            
+            font-size: 8rem;
+        }
+        #timeArea {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 50%;
+        }
+        #focusArea {
+            position: absolute;
+            display: flex; 
+            flex-direction: column;
+            top: 50px;
+            right: 0;
+            width: 50%;
+            margin-top: 50px;
+            text-align: left;
+        }
+        #focusArea > h1 {
+            text-align: center;
+        }
+        #focus {
+            white-space: pre-wrap;
+            width: 60%; 
+            align-self: center;
+        }
+        h1 {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            margin: 0.5rem;
+            opacity: 0.8;
+        }
+
+        @media(max-width: 700px) {
+            #time {
+                font-size: 6rem;
+            }
+        }
+
+        @media(max-width: 1350px) {
+            body {
+                justify-content: flex-start;
+            }
+            #timeArea {
+                position: initial;
+                margin-top: 50px;
+                text-align: center;
+                width: auto;
+            }
+            #focusArea {
+                position: initial;
+            }
+        }
+    </style>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Tab</title>
 </head>
@@ -21,6 +97,105 @@
         <h2 id="focus" contenteditable="true"></h2>
     </div>
         
-<script src="js/app.js"></script>
+<script>
+    // Dom Elements
+    const   time = document.getElementById('time'),
+            greeting = document.getElementById('greeting'),
+            name = document.getElementById('name'),
+            focus = document.getElementById('focus');
+    // Show time
+    function showTime() {
+        let today = new Date(),
+            hour = today.getHours(),
+            min = today.getMinutes(),
+            sec = today.getSeconds();
+        //Output time
+        time.innerHTML = `${addZero(hour)}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)}`
+        setTimeout(showTime, 1000);
+    }
+    // Add Zeros
+    function addZero(n) {
+        return (parseInt(n, 10) < 10 ? '0' : '') + n;
+    }
+    function setBG() {
+        let today = new Date(),
+            hour = today.getHours();
+        if (hour < 6) {
+            //night
+            document.body.style.backgroundImage = "url('night.jpg')";
+            document.body.style.color = "white";
+            greeting.textContent = 'Good Night';
+        } else if (hour < 12) {
+            //morning
+            document.body.style.backgroundImage = "url('morning.jpg')";
+            document.body.style.color = "white";
+            document.body.style.textShadow="-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black"
+            greeting.textContent = 'Good Morning';
+            
+        } else if (hour < 17) {
+            //daytime
+            document.body.style.backgroundImage = "url('midday.jpg')";
+            document.body.style.color = "white";
+            document.body.style.textShadow="-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black"
+            greeting.textContent = 'Good Day';
+        } else {
+            //evening
+            document.body.style.backgroundImage = "url('evening.jpg')";
+            document.body.style.color = "white";
+            document.body.style.textShadow="-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black"
+            greeting.textContent = 'Good Evening';
+        }
+    }
+
+    // Set Name
+    function setName(e) {
+        if(e.type === 'keypress') {
+            //make sure enter is pressed
+            if (e.which == 13 || e.keyCode == 13) { 
+                localStorage.setItem('name', e.target.innerText);
+                name.blur();
+            }
+        } else {
+            localStorage.setItem('name', e.target.innerText);
+        }
+    }
+    // Get Name
+    function getName() {
+        if (localStorage.getItem('name') === null) {
+            name.textContent = '[Enter Name]';
+        } else {
+            name.textContent = localStorage.getItem('name');
+        }
+    }
+    // Set Focus
+    function setFocus(e) {
+        if(e.type === 'keypress') {
+            if (e.which == 13 || e.keyCode == 13) { 
+                localStorage.setItem('focus', e.target.innerText);
+            }
+        } else {
+            localStorage.setItem('focus', e.target.innerText);
+        }
+    }
+    // Get Name
+    function getFocus() {
+        if (localStorage.getItem('focus') === null || localStorage.getItem('focus') === '') {
+            focus.textContent = '[Enter Focus]';
+        } else {
+            focus.textContent = localStorage.getItem('focus');
+        }
+    }
+    console.log('focus: ' +localStorage.getItem('focus'));
+
+    name.addEventListener('keypress', setName);
+    name.addEventListener('blur', setName);
+    focus.addEventListener('keypress', setFocus);
+    focus.addEventListener('blur', setFocus);
+    // run
+    showTime();
+    setBG();
+    getName();
+    getFocus();
+</script>
 </body>
 </html>
