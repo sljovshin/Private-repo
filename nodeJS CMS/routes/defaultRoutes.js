@@ -3,6 +3,12 @@ const router = express.Router();
 const controller = require('../controllers/defaultController')
 
 /* Routes */
+router.all('/*', (req, res, next) => {
+      req.app.locals.layout = 'default';
+      next();
+  });
+  
+
 router.route('/')
       .get(controller.index);
 

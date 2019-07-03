@@ -15,6 +15,22 @@ const ArticleSchema = new Schema({
         type: String,
         required: true
     },
+    author: {
+        type: Schema.Types.ObjectId,
+        ref: 'user'
+    },
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'category'
+    },
+    comments: [{
+        type: Schema.Types.ObjectId,
+        ref: 'comment'
+    }],
+    allowComments: {
+        type: Boolean,
+        default: false
+    },
     creationDate: {
         type: Date,
         default: Date.now()
@@ -22,4 +38,4 @@ const ArticleSchema = new Schema({
 
 });
 
-module.exports = mongoose.model('Article', ArticleSchema)
+module.exports = mongoose.model('article', ArticleSchema)
