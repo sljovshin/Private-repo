@@ -20,6 +20,19 @@ router.route('/articles/create')
       .post(adminController.submitArticle);
 
 router.route('/articles/edit/:id')
-      .get(adminController.editArticle);
+      .get(adminController.editArticle)
+      .put(adminController.editArticleSubmit);
+
+router.route('/articles/delete/:id')
+      .delete(adminController.deleteArticle);
+
+router.route('/category')
+      .get(adminController.getCategories)
+      .post(adminController.createCategory);
+
+router.route('/category/edit/:id')
+      .get(adminController.editCategoriesGet)
+      .post(adminController.editCategoriesPost);
+
 
 module.exports = router;

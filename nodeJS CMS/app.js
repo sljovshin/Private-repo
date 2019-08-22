@@ -4,8 +4,10 @@ const mongoose = require('mongoose');
 const path = require('path');
 const hbs = require('express-handlebars');
 const flash = require('connect-flash');
-const session = require('express-session')
+const session = require('express-session');
+const methodOverride = require('method-override');
 const { mongoDBurl, PORT, globalVariables } = require('./config/configuration'); 
+const { selectOption } = require('./config/customFunctions'); 
 
 
 const app = express();
@@ -34,9 +36,11 @@ app.use(flash());
 app.use(globalVariables);
 
 /* Configure ViewEngine to use Handlebars */
-app.engine('handlebars', hbs({defaultLayout: 'default'}));
+app.engine('handlebars', hbs({defaultLayout: 'default', helpers: {select: selectOption}}));
 app.set('view engine', 'handlebars');
 
+/* Method Override middleware */
+app.use(methodOverride('newMethod'));
 
 /* Routes */
 const defaultRoutes = require('./routes/defaultRoutes');

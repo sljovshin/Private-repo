@@ -5,21 +5,28 @@
     <table class="table table-bordered">
         <thead class="bg-dark">
             <tr class="text-white text-center">
-                <th>Id</th>
                 <th>Title</th>
                 <th>Description</th>
                 <th>Status</th>
+                <th>Comments Allowed</th>
+                <th>Category</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {{#each articles}}
             <tr class="text-center">
-                <td>{{_id}}</td>
                 <td>{{title}}</td>
                 <td>{{description}}</td>
                 <td>{{status}}</td>
-                <td><a href="/admin/articles/edit/{{_id}}" class="btn btn-sm btn-warning">Edit Article</a></td>
+                <td>{{allowComments}}</td>
+                <td>{{category.title}}</td>
+                <td class="d-flex">
+                    <a href="/admin/articles/edit/{{_id}}" class="btn btn-sm btn-warning mr-2">Edit</a>
+                    <form action="/admin/articles/delete/{{id}}?newMethod=DELETE" method="post">
+                      <button class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </td>
             </tr>
         {{/each}}
         </tbody>
